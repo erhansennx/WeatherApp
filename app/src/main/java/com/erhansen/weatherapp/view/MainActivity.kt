@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
                     println("Image : https://openweathermap.org/img/wn/${data.weather[0].icon}.png")
 
                     cityNameTextView.text = data.name + ", ${data.sys.country}"
-                    degreeTextView.text = "Degree \n" +data.main.temp.toString() + " °C"
+                    degreeTextView.text = "Degree \n " +data.main.temp.toInt()/10 + " °C"
                     windSpeedTextView.text = "Wind Speed \n" +data.wind.speed.toString()
                     humidityTextView.text = "Humidity \n" +data.main.humidity.toString()
                     latitudeTextView.text = "Latitude " +data.coord.lat.toString()
